@@ -3,7 +3,7 @@ class Bank(object):
 
     def __init__(self, name, customers = []):
         self.name = name
-        customers = Bank.noRepeats(customers)
+        customers = Bank.getUnique(customers)
         self.customers = customers
     
     def addCustomer(self, customer):
@@ -37,6 +37,6 @@ class Bank(object):
         return self.name
 
     @staticmethod
-    def noRepeats(customerList):
+    def getUnique(customerList):
         customerSet = set(customerList)
         return list(customerSet)
