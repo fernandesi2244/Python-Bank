@@ -1,10 +1,11 @@
 # Python-Bank
-A quick Python program to represent a virtual bank system (Python practice)
+This is a quick Python project to represent a virtual bank system (for Python practice).
+Also, I embedded a "Bank Research Initiative" mini-project to practice handling data.
 
 # About
 I just made this project to explore some of the basics of Python.
 
-This project features 5 Python programs that comprise a virtual bank system:
+The main project features 5 Python programs that comprise a virtual bank system:
 
 - Bank.py
     Represents a bank
@@ -18,6 +19,4 @@ This project features 5 Python programs that comprise a virtual bank system:
     Represents a high-net-worth customer who would receive special attention
     
     
-There is also one Python file for testing some of the features of the banking system:
-
-- Simulation.py
+There is also one Python file (Simulation.py) for testing some of the features of the banking system:
