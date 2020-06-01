@@ -1,6 +1,5 @@
 import pandas as pd, matplotlib.pyplot as plt
 from scipy.stats import linregress
-import numpy as nd
 
 class StatsAnalysis(object):
     def __init__(self, fileName):
