@@ -2,21 +2,21 @@ from kaggle.api.kaggle_api_extended import KaggleApi
 from os import listdir
 
 class DownloadDataset(object):
-    def __init__(self, dataset, csvName, fileDir):
+    def __init__(self, dataset, csv_name, file_dir):
         self.dataset = dataset
-        self.csvName = csvName
-        self.fileDir = fileDir
+        self.csv_name = csv_name
+        self.file_dir = file_dir
         self.api = KaggleApi()
         self.api.authenticate()
 
-    def downloadFile(self):
-        if(self.getDownloadedFile() is None):
-            self.api.dataset_download_file(self.dataset, self.csvName, self.fileDir)
-            print('File successfully downloaded! Proceeding...')
+    def download_file(self):
+        if(self.get_downloaded_file() is None):
+            self.api.dataset_download_file(self.dataset, self.csv_name, self.file_dir)
+            print('File successfully downloaded! Proceeding...\n')
         else:
-            print('The csv file has already been downloaded! Proceeding...')
+            print('The csv file has already been downloaded! Proceeding...\n')
 
-    def getDownloadedFile(self):
+    def get_downloaded_file(self):
         for entry in listdir('Bank Research Initiative'):
             if '.csv' in entry:
                 return entry
