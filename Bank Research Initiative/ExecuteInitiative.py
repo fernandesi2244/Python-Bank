@@ -2,16 +2,18 @@ from DownloadDataset import DownloadDataset as Downloader
 from StatsAnalysis import StatsAnalysis
 
 dataset = 'barelydedicated/bank-customer-churn-modeling'
-csvName = 'Churn_Modelling.csv'
-fileDir = 'Bank Research Initiative'
+csv_name = 'Churn_Modelling.csv'
+file_dir = 'Bank Research Initiative'
 
-downloader = Downloader(dataset, csvName, fileDir)
-fileName = downloader.downloadFile()
+downloader = Downloader(dataset, csv_name, file_dir)
+downloader.download_file()
 
-downloadedFile = downloader.getDownloadedFile()
-if(downloadedFile is None):
-    print("Couldn't locate downloaded csv file... Please try again!")
+downloaded_file = downloader.get_downloaded_file()
+if(downloaded_file is None):
+    print("Couldn't locate downloaded csv file... Please fix the problem and try again!")
     exit()
 
-statsAnalyzer = StatsAnalysis(downloadedFile)
-statsAnalyzer.regression('Age', 'EstimatedSalary')
+stats_analyzer = StatsAnalysis(downloaded_file)
+stats_analyzer.display(columns=['Age', 'EstimatedSalary'], indexing_value='Surname', num_rows = 20)
+stats_analyzer.regression('Age', 'EstimatedSalary', num_points=500)
+stats_analyzer.five_num_summary('Balance')
