@@ -1,6 +1,6 @@
 # Python-Bank
 This is a quick Python project to represent a virtual bank system (for Python practice).
-Also, I embedded a "Bank Research Initiative" mini-project to practice handling data.
+Also, I embedded a "Bank Research Initiative" mini-project to practice handling and analyzing data.
 
 # About
 I just made this project to explore some of the basics of Python.
